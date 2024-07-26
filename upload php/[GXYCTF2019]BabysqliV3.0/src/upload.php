@@ -11,7 +11,7 @@
 </form>
 
 <?php
-error_reporting(0);
+// error_reporting(0);
 class Uploader{
 	public $Filename;
 	public $command;
@@ -62,7 +62,7 @@ class Uploader{
 if(isset($_FILES['file'])) {
 	$uploader = new Uploader();
 	$uploader->upload($_FILES["file"]);
-	if(@file_get_contents($uploader)){
+	if(file_get_contents($uploader)){
 		echo "Tệp được lưu tại:<br>".$uploader."<br>";
 		echo file_get_contents($uploader);
 	}

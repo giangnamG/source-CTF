@@ -9,9 +9,9 @@ COPY ./src/ /var/www/html/
 COPY ./apache2.conf /etc/apache2/apache2.conf
 COPY ./php.ini /usr/local/etc/php/php.ini
 COPY ./flag /flag
-RUN mkdir /var/www/html/upload/ && \
+RUN mkdir /var/www/html/uploads/ && \
     chmod -R 755 /var/www/html/ && \
-    chmod -R 777 /var/www/html/upload/ && \
+    chmod -R 777 /var/www/html/uploads/ && \
     chown -R root:root /var/www/html 
 
 RUN apk update && apk add --no-cache shadow \
