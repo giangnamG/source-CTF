@@ -29,20 +29,17 @@ class Uploader{
 			$this->Filename = $sandbox.$_SESSION['user'].$ext;
 		}
 
-		$this->command = "echo '<br><br>Master, I want to study rizhan!<br><br>';";
+		$this->command = "echo '<br><br>Master, I want to study !<br><br>';";
 		$this->session_id = $_SESSION['user'];
 	}
 	
 	function upload($file){
-		global $sandbox;
-		global $ext;
-
 		if(preg_match("[^a-z0-9]", $this->Filename)){
 			$this->command = "die('illegal filename!');";
 		}
 		else{
 			if($file['size'] > 1024){
-				$this->command = "die('you are too big (â²â½`ã)');";
+				$this->command = "die('you are too big ');";
 			}
 			else{
 				$this->command = "move_uploaded_file('".$file['tmp_name']."', '" . $this->Filename . "');";
