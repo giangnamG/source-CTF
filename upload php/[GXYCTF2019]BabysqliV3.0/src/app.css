@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    background-color: #f0f0f0; /* Màu nền trang */
+}
+
+/* Căn chỉnh form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+    padding: 20px;
+    background-color: #fff; /* Màu nền form */
+    border-radius: 8px; /* Bo tròn góc */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho form */
+}
+
+/* Căn chỉnh các phần tử input và button */
+input, button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff; /* Màu nền button */
+    color: #fff; /* Màu chữ button */
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Màu nền button khi hover */
+}
